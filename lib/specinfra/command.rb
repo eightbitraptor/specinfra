@@ -407,3 +407,9 @@ require 'specinfra/command/poky/base/interface'
 require 'specinfra/command/poky/base/inventory'
 require 'specinfra/command/poky/base/package'
 require 'specinfra/command/poky/base/service'
+
+# VoidLinux (inherit Linux)
+require 'specinfra/command/voidlinux'
+require 'specinfra/command/voidlinux/base'
+require 'specinfra/command/voidlinux/base/package'
+require 'specinfra/command/voidlinux/base/service'

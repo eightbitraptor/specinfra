@@ -1,9 +1,11 @@
 class Specinfra::Helper::DetectOs::Voidlinux < Specinfra::Helper::DetectOs
   def detect
-    detect_cmd = "set -nE 's/^ID=(.*)/\1/p' /etc/os-release | grep \"void\""
+    if run_command("ls /etc/os-release").success?
+      line = run_command("cat /etc/os-release").stdout
 
-    if run_command(detect_cmd).success?
-      { :family => 'void', :release => nil }
+      if line =~ /^ID="void"/
+        { :family => 'voidlinux', :release => nil }
+      end
     end
   end
 end

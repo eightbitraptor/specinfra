@@ -20,7 +20,7 @@ module Specinfra
           end
 
           def start_under_runit(service)
-            "sv start /var/service/#{service}"
+            "sv up /var/service/#{service}"
           end
 
           def stop_under_runit(service)
