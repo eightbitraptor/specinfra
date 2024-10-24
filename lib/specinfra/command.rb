@@ -19,6 +19,7 @@ require 'specinfra/command/module/systemd'
 require 'specinfra/command/module/zfs'
 require 'specinfra/command/module/ss'
 require 'specinfra/command/module/openrc'
+require 'specinfra/command/module/runit'
 
 # Base
 require 'specinfra/command/base'
